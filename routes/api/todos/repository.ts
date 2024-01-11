@@ -1,10 +1,12 @@
 import { Data, ITodo } from "../../../types/todo.types.ts";
+import { resolve } from "https://deno.land/std@0.211.0/path/mod.ts";
 
-export const getData = async (): Promise<Data> =>
-  JSON.parse(await Deno.readTextFile("static/data.json")) as Data;
-
+const path = resolve(Deno.cwd(), "data.json");
+export const getData = async (): Promise<Data> => {
+  return JSON.parse(await Deno.readTextFile(path)) as Data;
+};
 export const setData = async (todos: ITodo[]): Promise<void> =>
   await Deno.writeTextFile(
-    "static/data.json",
+    path,
     JSON.stringify({ todos }),
   );
