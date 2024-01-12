@@ -34,6 +34,7 @@ export default function Home(props: PageProps<HomeContext>) {
         alt="the Fresh logo: a sliced lemon dripping with juice"
       />
       <h1 class="text-4xl font-bold">Fresh Todo List</h1>
+
       <TodoList
         todos={props.data.todos}
       />
