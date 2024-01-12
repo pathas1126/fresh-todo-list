@@ -8,14 +8,18 @@ interface HomeContext {
 
 export const handler: Handlers<HomeContext> = {
   async GET(_req, ctx) {
-    const todos = await (await fetch(
-      `${ctx.url.origin}/api/todos`,
-      {
-        method: "GET",
-      },
-    )).json();
-
-    return ctx.render({ todos });
+    try {
+      const todos = await (await fetch(
+        `${ctx.url.origin}/api/todos`,
+        {
+          method: "GET",
+        },
+      )).json();
+      return ctx.render({ todos });
+    } catch (error) {
+      console.log(error);
+      return ctx.render({ todos: [] });
+    }
   },
 };
 
