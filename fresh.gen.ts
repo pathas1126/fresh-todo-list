@@ -6,6 +6,7 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $api_joke_index from "./routes/api/joke/index.ts";
 import * as $api_todos_id_ from "./routes/api/todos/[id].ts";
+import * as $api_todos_db from "./routes/api/todos/db.ts";
 import * as $api_todos_index from "./routes/api/todos/index.ts";
 import * as $api_todos_repository from "./routes/api/todos/repository.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
@@ -22,6 +23,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/api/joke/index.ts": $api_joke_index,
     "./routes/api/todos/[id].ts": $api_todos_id_,
+    "./routes/api/todos/db.ts": $api_todos_db,
     "./routes/api/todos/index.ts": $api_todos_index,
     "./routes/api/todos/repository.ts": $api_todos_repository,
     "./routes/greet/[name].tsx": $greet_name_,

@@ -52,7 +52,7 @@ export const Todo = (
   };
 
   return (
-    <div class="max-w-sm p-6 flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-sm h-[185px] p-6 flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <input
         class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
         value={updateInfo.value.name}
