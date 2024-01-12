@@ -8,10 +8,9 @@ interface HomeContext {
 
 export const handler: Handlers<HomeContext> = {
   async GET(_req, ctx) {
-    console.log(_req.url);
     try {
       const todos = await (await fetch(
-        `${_req.url}api/todos`,
+        `${ctx.url.origin}/api/todos`,
         {
           method: "GET",
         },
