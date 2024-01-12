@@ -7,9 +7,9 @@ interface HomeContext {
 }
 
 export const handler: Handlers<HomeContext> = {
-  async GET(req, ctx) {
+  async GET(_req, ctx) {
     const todos = await (await fetch(
-      `${req.url}api/todos`,
+      `${ctx.url.origin}/api/todos`,
       {
         method: "GET",
       },
